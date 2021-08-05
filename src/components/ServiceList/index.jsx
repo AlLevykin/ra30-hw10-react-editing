@@ -22,7 +22,8 @@ const ServiceList = (props) => {
         {
           items.map((item) =>
             <li className="list-group-item" key={item.id}>
-              {item.name} {item.price}
+              <span>{item.name} {item.price}</span>
+              <button type="button" className="btn btn-danger mx-3">x</button>
             </li>
           )
         }
