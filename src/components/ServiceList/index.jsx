@@ -18,7 +18,15 @@ const ServiceList = (props) => {
 
   return (
     (items.length > 0) ? 
-      <h3>ServiceList</h3>
+      <ul className="list-group list-group-flush">
+        {
+          items.map((item) =>
+            <li className="list-group-item" key={item.id}>
+              {item.name} {item.price}
+            </li>
+          )
+        }
+      </ul>
     :
       <></>
     );
