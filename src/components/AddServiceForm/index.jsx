@@ -3,7 +3,10 @@ import React from "react";
 const AddServiceForm = (props) => {
 
   return (
-    <h3>form</h3>
+    <form onSubmit="">
+      <input name="name"/>
+      <button type='submit'>Save</button>
+    </form>
   );
 
 }
