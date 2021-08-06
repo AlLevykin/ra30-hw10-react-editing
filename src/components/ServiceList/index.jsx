@@ -1,6 +1,6 @@
 import React from "react";
 import {useSelector, useDispatch} from "react-redux";
-import {Trash, Pen, MusicNoteBeamed} from "react-bootstrap-icons";
+import {Trash, Pen } from "react-bootstrap-icons";
 import {removeService} from "../../actions/actionCreators";
 
 const ServiceList = () => {
