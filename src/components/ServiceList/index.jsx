@@ -1,21 +1,20 @@
-import React from "react";
-import {useSelector, useDispatch} from "react-redux";
-import {Trash, Pen } from "react-bootstrap-icons";
-import {removeService} from "../../actions/actionCreators";
+import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { Trash, Pen } from 'react-bootstrap-icons';
+import { removeService, editService } from '../../actions/actionCreators';
 
 const ServiceList = () => {
-
   const items = useSelector(state => state.serviceList);
 
   const dispatch = useDispatch();
 
-  const handleRemove = (id) => {
+  const handleRemove = id => {
     dispatch(removeService(id));
-  }
+  };
 
-  const handleEdit = ({id,name,price}) => {
-    console.log(`${id} ${name} ${price}`);
-  }
+  const handleEdit = ({ id, name, price }) => {
+    dispatch(editService(id, name, price));
+  };
 
   return items.length > 0 ? (
     <ul className="list-group list-group-flush">
@@ -24,10 +23,18 @@ const ServiceList = () => {
           <span>
             {item.name} {item.price}
           </span>
-          <button type="button" className="btn btn-success ms-3" onClick={() => handleEdit(item)}>
+          <button
+            type="button"
+            className="btn btn-success ms-3"
+            onClick={() => handleEdit(item)}
+          >
             <Pen />
           </button>
-          <button type="button" className="btn btn-danger ms-3" onClick={() => handleRemove(item.id)}>
+          <button
+            type="button"
+            className="btn btn-danger ms-3"
+            onClick={() => handleRemove(item.id)}
+          >
             <Trash />
           </button>
         </li>
