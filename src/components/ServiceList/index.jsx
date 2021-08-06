@@ -1,8 +1,9 @@
 import React from 'react';
-import { Trash, Pen } from 'react-bootstrap-icons';
+import {useSelector, useDispatch} from "react-redux";
+import {Trash, Pen} from 'react-bootstrap-icons';
 
 const ServiceList = props => {
-  const items = [];
+  const items = useSelector(state => state.serviceList);
 
   return items.length > 0 ? (
     <ul className="list-group list-group-flush">
