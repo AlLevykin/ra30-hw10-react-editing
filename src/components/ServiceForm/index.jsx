@@ -2,7 +2,7 @@ import React from "react";
 import {useSelector, useDispatch} from "react-redux";
 import {addService, changeServiceField} from "../../actions/actionCreators";
 
-const AddServiceForm = () => {
+const ServiceForm = () => {
 
   const item = useSelector(state => state.serviceAdd);
 
@@ -24,13 +24,13 @@ const AddServiceForm = () => {
   return (
     <form className="py-3" onSubmit={handleSubmit}>
       <div className="mb-3">
-        <label className="form-label" >
+        <label className="form-label w-100" >
           Услуга
           <input className="form-control" type="text" name="name" value={item.name} onChange={handleChange} />
         </label>
       </div>
       <div className="mb-3">
-        <label className="form-label" >
+        <label className="form-label w-100" >
           Стоимость
           <input className="form-control" type="number" name="price" value={item.price} onChange={handleChange} min="0" step="0.01"/>
         </label>
@@ -41,5 +41,5 @@ const AddServiceForm = () => {
 
 }
 
-export default AddServiceForm;
+export default ServiceForm;
 
