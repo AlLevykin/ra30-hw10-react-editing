@@ -9,5 +9,5 @@ export function removeService(id) {
 }
 
 export function changeServiceField(name,value) {
-  return {type:CHANGE_SERVICE_FIELD,payload:{name,value}}
+  return {type:CHANGE_SERVICE_FIELD,payload:{name, value}}
 }
