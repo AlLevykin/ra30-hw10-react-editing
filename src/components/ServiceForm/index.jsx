@@ -20,7 +20,7 @@ const ServiceForm = () => {
     if (item.id === "") {
       dispatch(addService(item.name, item.price));
     } else {
-      dispatch(saveService({item}));
+      dispatch(saveService(item.id, item.name, item.price));
     }
     dispatch(changeServiceField('name', ''));
     dispatch(changeServiceField('price', 0));
