@@ -60,8 +60,11 @@ const ServiceForm = () => {
           />
         </label>
       </div>
-      <button type="submit" className="btn btn-primary">
+      <button type="submit" className="btn btn-primary me-3">
         Save
+      </button>
+      <button type="button" className="btn btn-danger me-3" onClick={}>
+        Cancel
       </button>
     </form>
   );
