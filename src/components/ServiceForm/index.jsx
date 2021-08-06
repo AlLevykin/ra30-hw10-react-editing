@@ -41,6 +41,7 @@ const ServiceForm = () => {
             name="name"
             value={item.name}
             onChange={handleChange}
+            required
           />
         </label>
       </div>
@@ -55,6 +56,7 @@ const ServiceForm = () => {
             onChange={handleChange}
             min="0"
             step="0.01"
+            required
           />
         </label>
       </div>
