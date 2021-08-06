@@ -30,6 +30,8 @@ const ServiceForm = () => {
     dispatch(clearServiceForm());
   };
 
+  const handleCancel = () => dispatch(clearServiceForm());
+
   return (
     <form className="py-3" onSubmit={handleSubmit}>
       <div className="mb-3">
@@ -63,7 +65,7 @@ const ServiceForm = () => {
       <button type="submit" className="btn btn-primary me-3">
         Save
       </button>
-      <button type="button" className="btn btn-danger me-3" onClick={}>
+      <button type="button" className="btn btn-danger me-3" onClick={handleCancel}>
         Cancel
       </button>
     </form>
