@@ -10,7 +10,7 @@ const initialState = {
   price: 0.0
 };
 
-const serviceAddReducer = (state = initialState, action) => {
+const serviceReducer = (state = initialState, action) => {
   switch (action.type) {
     case CHANGE_SERVICE_FIELD:
       const { name, value } = action.payload;
@@ -24,4 +24,4 @@ const serviceAddReducer = (state = initialState, action) => {
   }
 };
 
-export default serviceAddReducer;
+export default serviceReducer;
