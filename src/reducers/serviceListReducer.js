@@ -1,5 +1,5 @@
 import { nanoid } from 'nanoid';
-import {ADD_SERVICE, REMOVE_SERVICE} from "./actionTypes";
+import {ADD_SERVICE, REMOVE_SERVICE} from "../actions/actionTypes";
 
 const initialState = [
   {

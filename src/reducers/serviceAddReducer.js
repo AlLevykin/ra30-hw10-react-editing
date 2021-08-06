@@ -1,4 +1,4 @@
-import {CHANGE_SERVICE_FIELD} from "./actionTypes";
+import {CHANGE_SERVICE_FIELD} from "../actions/actionTypes";
 
 const initialState = {
   fieldName: "",
