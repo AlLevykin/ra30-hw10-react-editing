@@ -32,6 +32,9 @@ const ServiceForm = () => {
 
   const handleCancel = () => dispatch(clearServiceForm());
 
+  const cancelButtonVisibility = () =>
+    item.name === '' && item.price === 0 ? 'invisible' : 'visible';
+
   return (
     <form className="py-3" onSubmit={handleSubmit}>
       <div className="mb-3">
@@ -65,7 +68,11 @@ const ServiceForm = () => {
       <button type="submit" className="btn btn-primary me-3">
         Save
       </button>
-      <button type="button" className="btn btn-danger me-3" onClick={handleCancel}>
+      <button
+        type="button"
+        className={`btn btn-danger me-3 ${cancelButtonVisibility()}`}
+        onClick={handleCancel}
+      >
         Cancel
       </button>
     </form>
