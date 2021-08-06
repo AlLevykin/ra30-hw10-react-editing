@@ -2,6 +2,7 @@ import {
   ADD_SERVICE,
   REMOVE_SERVICE,
   EDIT_SERVICE,
+  SAVE_SERVICE,
   CHANGE_SERVICE_FIELD
 } from '../actions/actionTypes';
 

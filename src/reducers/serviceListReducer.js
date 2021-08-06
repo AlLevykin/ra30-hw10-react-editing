@@ -2,7 +2,6 @@ import { nanoid } from 'nanoid';
 import {
   ADD_SERVICE,
   REMOVE_SERVICE,
-  EDIT_SERVICE,
   SAVE_SERVICE
 } from '../actions/actionTypes';
 
