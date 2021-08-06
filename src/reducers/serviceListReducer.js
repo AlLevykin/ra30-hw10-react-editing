@@ -2,7 +2,8 @@ import { nanoid } from 'nanoid';
 import {
   ADD_SERVICE,
   REMOVE_SERVICE,
-  EDIT_SERVICE
+  EDIT_SERVICE,
+  SAVE_SERVICE
 } from '../actions/actionTypes';
 
 const initialState = [
@@ -19,16 +20,19 @@ const initialState = [
 ];
 
 const serviceListReduser = (state = initialState, action) => {
+
+  let id, name, price;
+
   switch (action.type) {
     case ADD_SERVICE:
-      const { name, price } = action.payload;
+      ({ name, price } = action.payload);
       return [...state, { id: nanoid(), name: name, price: Number(price) }];
     case REMOVE_SERVICE:
-      const { id } = action.payload;
+      ({ id } = action.payload);
       return state.filter(service => service.id !== id);
-    case EDIT_SERVICE:
-      const { id, name, price } = action.payload;
-      return state;
+    case SAVE_SERVICE:
+      ({ id, name, price } = action.payload);
+      return state.map(service => service.id === id ? {id, name, price} : service);
     default:
       return state;
   }
