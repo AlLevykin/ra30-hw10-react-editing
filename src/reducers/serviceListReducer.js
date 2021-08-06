@@ -31,7 +31,6 @@ const serviceListReduser = (state = initialState, action) => {
       return state.filter(service => service.id !== id);
     case SAVE_SERVICE:
       ({ id, name, price } = action.payload);
-      console.log(action);
       return state.map(service => service.id === id ? {id, name, price} : service);
     default:
       return state;

@@ -3,7 +3,8 @@ import {
   REMOVE_SERVICE,
   EDIT_SERVICE,
   SAVE_SERVICE,
-  CHANGE_SERVICE_FIELD
+  CHANGE_SERVICE_FIELD,
+  CLEAR_SERVICE_FORM
 } from '../actions/actionTypes';
 
 export function addService(name, price) {
@@ -24,4 +25,8 @@ export function saveService(id, name, price) {
 
 export function changeServiceField(name, value) {
   return { type: CHANGE_SERVICE_FIELD, payload: { name, value } };
+}
+
+export function clearServiceForm() {
+  return { type: CLEAR_SERVICE_FORM, payload: null };
 }

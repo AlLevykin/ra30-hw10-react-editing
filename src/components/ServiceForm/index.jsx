@@ -1,6 +1,11 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { addService, saveService, changeServiceField } from '../../actions/actionCreators';
+import {
+  addService,
+  saveService,
+  changeServiceField,
+  clearServiceForm
+} from '../../actions/actionCreators';
 
 const ServiceForm = () => {
   const item = useSelector(state => state.serviceAdd);
@@ -17,13 +22,12 @@ const ServiceForm = () => {
 
   const handleSubmit = event => {
     event.preventDefault();
-    if (item.id === "") {
+    if (item.id === '') {
       dispatch(addService(item.name, item.price));
     } else {
       dispatch(saveService(item.id, item.name, item.price));
     }
-    dispatch(changeServiceField('name', ''));
-    dispatch(changeServiceField('price', 0));
+    dispatch(clearServiceForm());
   };
 
   return (

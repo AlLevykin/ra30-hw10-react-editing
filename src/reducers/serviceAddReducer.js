@@ -1,7 +1,11 @@
-import { CHANGE_SERVICE_FIELD, EDIT_SERVICE } from '../actions/actionTypes';
+import {
+  CHANGE_SERVICE_FIELD,
+  EDIT_SERVICE,
+  CLEAR_SERVICE_FORM
+} from '../actions/actionTypes';
 
 const initialState = {
-  id: "",
+  id: '',
   name: '',
   price: 0.0
 };
@@ -12,7 +16,9 @@ const serviceAddReducer = (state = initialState, action) => {
       const { name, value } = action.payload;
       return { ...state, [name]: value };
     case EDIT_SERVICE:
-      return {...action.payload};
+      return { ...action.payload };
+    case CLEAR_SERVICE_FORM:
+      return initialState;
     default:
       return state;
   }
