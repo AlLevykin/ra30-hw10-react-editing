@@ -12,12 +12,13 @@ const AddServiceForm = () => {
     const name = event.target.name;
     const value = (event.target.valueAsNumber) ? event.target.valueAsNumber : event.target.value;
     dispatch(changeServiceField(name,value));
-    console.log(value);
   }
   
   const handleSubmit = event => {
     event.preventDefault();
     dispatch(addService(item.name,item.price));
+    dispatch(changeServiceField("name", ""));
+    dispatch(changeServiceField("price", 0));
   }
 
   return (
