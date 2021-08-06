@@ -24,10 +24,16 @@ const AddServiceForm = () => {
   return (
     <form className="py-3" onSubmit={handleSubmit}>
       <div className="mb-3">
-       <input className="form-control" type="text" name="name" value={item.name} onChange={handleChange} />
+        <label className="form-label" >
+          Услуга
+          <input className="form-control" type="text" name="name" value={item.name} onChange={handleChange} />
+        </label>
       </div>
       <div className="mb-3">
-        <input className="form-control" type="number" name="price" value={item.price} onChange={handleChange} min="0" step="0.01"/>
+        <label className="form-label" >
+          Стоимость
+          <input className="form-control" type="number" name="price" value={item.price} onChange={handleChange} min="0" step="0.01"/>
+        </label>
       </div>
       <button type="submit" className="btn btn-primary">Save</button>
     </form>
