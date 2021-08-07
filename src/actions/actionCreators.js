@@ -4,7 +4,8 @@ import {
   EDIT_SERVICE,
   SAVE_SERVICE,
   CHANGE_SERVICE_FIELD,
-  CLEAR_SERVICE_FORM
+  CLEAR_SERVICE_FORM,
+  FILTER_SERVICE_LIST
 } from '../actions/actionTypes';
 
 export function addService(name, price) {
@@ -29,4 +30,8 @@ export function changeServiceField(name, value) {
 
 export function clearServiceForm() {
   return { type: CLEAR_SERVICE_FORM, payload: null };
+}
+
+export function filterServiceList(filter) {
+  return { type: FILTER_SERVICE_LIST, payload: filter };
 }

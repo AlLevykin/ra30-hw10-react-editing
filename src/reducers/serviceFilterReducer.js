@@ -2,7 +2,7 @@ import {FILTER_SERVICE_LIST} from '../actions/actionTypes';
 
 const initialState = '';
 
-const serviceFilterReduser = (state = initialState, action) => {
+const serviceFilterReducer = (state = initialState, action) => {
   switch (action.type) {
     case FILTER_SERVICE_LIST:
       return action.payload;
@@ -11,4 +11,4 @@ const serviceFilterReduser = (state = initialState, action) => {
   }
 };
 
-export default serviceFilterReduser;
+export default serviceFilterReducer;
