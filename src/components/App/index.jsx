@@ -1,5 +1,5 @@
 import React from "react";
-import FilterForm from '../../FilterForm';
+import FilterForm from '../FilterForm';
 import ServiceForm from "../ServiceForm";
 import ServiceList from "../ServiceList";
 
