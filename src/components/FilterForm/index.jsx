@@ -1,5 +1,5 @@
 import React from 'react';
-import { Funnel, XCircle} from 'react-bootstrap-icons';
+import { Funnel, XCircle } from 'react-bootstrap-icons';
 
 const FilterForm = () => {
   return (
@@ -9,7 +9,9 @@ const FilterForm = () => {
         <button className="btn btn-primary" type="submit">
           <Funnel />
         </button>
-        <button className="btn btn-danger"><XCircle /></button>
+        <button className="btn btn-danger">
+          <XCircle />
+        </button>
       </div>
     </form>
   );
