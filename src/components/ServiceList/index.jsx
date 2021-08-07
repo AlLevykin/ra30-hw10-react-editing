@@ -4,7 +4,11 @@ import { Trash, Pen } from 'react-bootstrap-icons';
 import { removeService, editService } from '../../actions/actionCreators';
 
 const ServiceList = () => {
-  const items = useSelector(state => state.serviceList);
+  const data = useSelector(state => state.serviceList);
+
+  const filter = useSelector(state => state.serviceFilter);
+
+  const items = filter === '' ? data : data.filter(service => service.name === filter);
 
   const dispatch = useDispatch();
 
