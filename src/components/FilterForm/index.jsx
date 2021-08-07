@@ -15,16 +15,21 @@ const FilterForm = () => {
 
   const handleClearFilter = () => {
     setFilterValue('');
-    /dispatch(filterServiceList(''));
-  }
+    dispatch(filterServiceList(''));
+  };
 
-  const handleFilterFieldChange = (event) =>
-    setFilterValue(event.target.value);
+  const handleFilterFieldChange = event => setFilterValue(event.target.value);
 
   return (
     <form onSubmit={handleSubmit}>
       <div className="input-group">
-        <input type="text" name="filter" className="form-control" value={filterValue} onChange={handleFilterFieldChange} />
+        <input
+          type="text"
+          name="filter"
+          className="form-control"
+          value={filterValue}
+          onChange={handleFilterFieldChange}
+        />
         <button className="btn btn-primary" type="submit">
           <Funnel />
         </button>
