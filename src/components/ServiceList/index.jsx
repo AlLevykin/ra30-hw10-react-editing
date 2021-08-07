@@ -8,7 +8,7 @@ const ServiceList = () => {
 
   const filter = useSelector(state => state.serviceFilter);
 
-  const items = filter === '' ? data : data.filter(service => service.name === filter);
+  const items = filter === '' ? data : data.filter(service => service.name.indexOf(filter) !== -1);
 
   const dispatch = useDispatch();
 
