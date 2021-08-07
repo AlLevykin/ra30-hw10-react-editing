@@ -1,9 +1,14 @@
-import React from "react";
+import React from 'react';
+import FilterForm from '../FilterForm';
+import ServiceForm from '../ServiceForm';
+import ServiceList from '../ServiceList';
+
 export default function App() {
-return (
-<div>
-<h1 className="text-danger">Hello StackBlitz!</h1>
-<p>Start editing to see some magic happen :)</p>
-</div>
-);
+  return (
+    <div className="container">
+      <ServiceForm />
+      <FilterForm />
+      <ServiceList />
+    </div>
+  );
 }
