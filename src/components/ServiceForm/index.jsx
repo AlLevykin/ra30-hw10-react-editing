@@ -8,7 +8,7 @@ import {
 } from '../../actions/actionCreators';
 
 const ServiceForm = () => {
-  const item = useSelector(state => state.serviceAdd);
+  const item = useSelector(state => state.service);
 
   const dispatch = useDispatch();
 

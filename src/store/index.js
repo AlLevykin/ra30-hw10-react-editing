@@ -5,7 +5,7 @@ import serviceFilterReducer from '../reducers/serviceFilterReducer';
 
 const reducer = combineReducers({
   serviceList: serviceListReducer,
-  serviceAdd: serviceReducer,
+  service: serviceReducer,
   serviceFilter: serviceFilterReducer
 });
 
